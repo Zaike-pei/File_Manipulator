@@ -1,4 +1,5 @@
 import sys
+import markdown
 
 def reverse(content):
     with open(sys.argv[3], 'w') as f:
@@ -23,6 +24,12 @@ def replace_string(content):
     with open(sys.argv[2], 'w') as f:
         f.write(content)
 
+def markdown_to_html(content):
+    with open(sys.argv[3], 'w') as f:
+        html = markdown.markdown(content)
+        f.write(html)
+
+
 def main():
     content = ''
     command = sys.argv[1]
@@ -38,6 +45,8 @@ def main():
         duplicate_contents(content)
     elif command == 'replace-string':
         replace_string(content)
+    elif command == 'markdown':
+        markdown_to_html(content)
     else:
         print("'" + command + "' does not exist.")
         return
