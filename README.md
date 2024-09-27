@@ -1,7 +1,7 @@
 # File_Manipulator
 指定したファイルの内容を読み込み、変更・複製・置き換え等をした新しいファイルを作成する。
 ## 機能とコマンド
-・文字のレバース　`reverse`（新しいファイルを作成）
+・文字のリバース　`reverse`（新しいファイルを作成）
   例）hello ⇒　olleh
 
 ・ファイルのコピー　`copy`（新しいファイルの作成）
@@ -14,7 +14,7 @@
 ・マークダウンファイルからhtmlファイルへの変換　`markdown`（新しいファイルを作成）
   例）　test.md ⇒ test.html
 
-## コマンドごとの使用方
+## コマンドごとの使用例
 リバースコマンド（reverse）<br />
 python3 file_manipulator.py reverse ファイル名 新しいファイル名
 <br />例）`python3 file_manipulator.py reverse test1.txt test2.txt`
